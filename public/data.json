@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "picture": "https://placehold.co/600x400",
+    "title": "Classic White T-Shirt",
+    "price": 19.99
+  },
+  {
+    "id": 2,
+    "picture": "https://placehold.co/600x400",
+    "title": "Denim Blue Jeans",
+    "price": 49.99
+  },
+  {
+    "id": 3,
+    "picture": "https://placehold.co/600x400",
+    "title": "Black Leather Jacket",
+    "price": 129.99
+  },
+  {
+    "id": 4,
+    "picture": "https://placehold.co/600x400",
+    "title": "Running Sneakers",
+    "price": 89.99
+  }
+]

@@ -1,15 +1,18 @@
-import type { CardType } from "../Types/CardType";
+import type { ProductType } from "../Types/ProductType";
 
-interface ClothCardProps {
-  card: CardType;
+interface ProductCardProps {
+  item: ProductType;
 }
-const ClothCard = ({ card }: ClothCardProps) => {
+const ProductCard = ({  item }: ProductCardProps) => {
+
+console.log(item.image)
+
   return (
     <div>
       <div className="bg-amber-100 w-96 h-160 mt-10 justify-center items-center hover:shadow-2xl">
-        <img className="w-full object-cover p-3" src={card.image} alt="" />
-        <p className="pl-2">{card.title}</p>
-        <h1 className="font-bold text-left pl-2">PKR {card.price}</h1>
+        <img className="w-full object-cover p-3" src={item.image} alt="kkkk" />
+        <p className="pl-2">{item.title}</p>
+        <h1 className="font-bold text-left pl-2">PKR {item.price}</h1>
         <button className="ml-2 mt-2 font-semibold rounded border border-black w-35 h-10 hover:bg-pink-950 hover:text-white ">
           ADD TO BAG
         </button>
@@ -24,4 +27,4 @@ const ClothCard = ({ card }: ClothCardProps) => {
   );
 };
 
-export default ClothCard;
+export default ProductCard;

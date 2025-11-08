@@ -1,7 +1,6 @@
-export type CardType = {
-  id:number;
+export type ProductType = {
+  id: number;
   image: string;
   title: string;
   price: number;
-  
 };
