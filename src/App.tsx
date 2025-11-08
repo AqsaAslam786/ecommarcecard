@@ -1,13 +1,13 @@
 import { useState } from "react";
 import ClothList from "./components/ClothList";
-import { CardType } from "./Types/CardType";
+import type { CardType } from "./Types/CardType";
 
 
 
 
 function App() { 
 
-const [viewProducts,setviewProducts]= useState<CardType[]>([])
+const [viewProducts,setviewProducts] = useState<CardType[]>([])
 
 
    async function fetchdata() {
@@ -19,7 +19,7 @@ const [viewProducts,setviewProducts]= useState<CardType[]>([])
    fetchdata();
   return (
     <>
-     
+     {/* <button onClick={fetchdata}>Fetch Data</button> */}
     <ClothList items={viewProducts} />
     </>
   )
