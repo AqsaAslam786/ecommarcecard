@@ -1,18 +1,27 @@
-interface type ClothCardProps{
-    clothingcard : ecommCardType
+import type { CardType } from "../Types/CardType";
+
+interface ClothCardProps {
+  card: CardType;
 }
-const ClothCard = () => {
+const ClothCard = ({ card }: ClothCardProps) => {
   return (
-    <div >
-        <div  className="bg-amber-100 w-90 h-160 ml-160 mt-20 justify-center items-center">
-
-      <img className="w-full object-cover p-3" src="https://www.junaidjamshed.com/media/catalog/product/4/6/46979jcks_2_.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=755&width=589&canvas=589:755" alt="" />
-      <p className="pl-2">MUSTERD BLENDED PLAIN KAMEEZ SHAWLWAR</p>
-      <h1 className="font-bold text-left pl-2">PKR 3,790.00</h1>
-      <button className="ml-2 mt-2 border border-black w-35 h-10 ">ADD TO BAG</button>
-        </div>
+    <div>
+      <div className="bg-amber-100 w-96 h-160 mt-10 justify-center items-center hover:shadow-2xl">
+        <img className="w-full object-cover p-3" src={card.image} alt="" />
+        <p className="pl-2">{card.title}</p>
+        <h1 className="font-bold text-left pl-2">PKR {card.price}</h1>
+        <button className="ml-2 mt-2 font-semibold rounded border border-black w-35 h-10 hover:bg-pink-950 hover:text-white ">
+          ADD TO BAG
+        </button>
+        <ul className="flex gap-2 items-center justify mb-2 ">
+            
+         { [2,4,6,8,10].map( n =>   (<li className="bg-red-400 rounded-full size-8 text-center mt-3 flex justify-center items-center">{n}</li>)
+            )}
+        </ul>
+      </div>
+ 
     </div>
-  )
-}
+  );
+};
 
-export default ClothCard
+export default ClothCard;
